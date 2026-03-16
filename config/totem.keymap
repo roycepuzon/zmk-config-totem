@@ -13,58 +13,185 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <0 20 9 31 33 36>;
+        };
+
+        bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <5 20 33>;
+        };
+
+        bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <20 33 6>;
+        };
+
+        bt2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <20 7 33>;
+        };
+
+        bt3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <8 20 33>;
+        };
+
+        bt4 {
+            bindings = <&bt BT_SEL 4>;
+            key-positions = <20 33 9>;
+        };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <20 4 33 36 5 31>;
+        };
+
+        reset {
+            bindings = <&sys_reset>;
+            key-positions = <20 25 33 26 36 31>;
+        };
+
+        btd0 {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <26 20 33>;
+        };
+
+        btd1 {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <20 33 27>;
+        };
+
+        btd2 {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <20 33 28>;
+        };
+
+        btd3 {
+            bindings = <&bt BT_DISC 3>;
+            key-positions = <29 20 33>;
+        };
+
+        btd4 {
+            bindings = <&bt BT_DISC 4>;
+            key-positions = <20 33 30>;
+        };
+
+        btclr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <20 33 15>;
+        };
+    };
+
+    behaviors {
+        hrml: hrml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 37>;
+        };
+
+        hrmr: hrmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 34>;
+        };
+
+        scrl_up: scrl_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_UP";
+            bindings = <&msc SCRL_UP>, <&kp PG_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        scrl_down: scrl_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_DOWN";
+            bindings = <&msc SCRL_DOWN>, <&kp PG_DN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        scrl_left: scrl_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_LEFT";
+            bindings = <&msc SCRL_LEFT>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        scrl_right: scrl_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_RIGHT";
+            bindings = <&msc SCRL_RIGHT>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        alpha {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R  &kp T    &kp Y      &kp U            &kp I          &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F  &kp G    &kp H      &kp J            &kp K          &kp L    &kp SEMI
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B    &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &kp APOS
-                         &kp LGUI  &mo 2  &mo 1    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+                &kp Q          &kp W             &kp F             &kp P               &kp B       &kp J      &kp L                &kp U              &kp Y              &kp SEMI
+                &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LEFT_GUI S  &hrml LEFT_SHIFT T  &kp G       &kp M      &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI E  &hrmr RIGHT_ALT I  &hrmr RCTRL O
+&hrml CAPS TAB  &kp Z          &kp X             &kp C             &kp D               &kp V       &kp K      &kp H                &kp COMMA          &kp DOT            &kp FSLH       &hrmr CAPSLOCK SQT
+                                                 &kp ESC           &mo 1               &kp BSPC    &kp SPACE  &mo 2                &kp ENTER
             >;
         };
 
-        nav_num {
+        l_callum {
             bindings = <
-                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP     &kp DELETE     &kp LA(DELETE)        &kp N5      &kp N6           &kp N7       &kp N8    &kp N9
-                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN   &kp RIGHT      &kp LA(RIGHT)         &kp N0      &kp N1           &kp N2       &kp N3    &kp N4
-&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp ENTER  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)    &kp PERIOD  &kp PLUS         &kp MINUS    &kp STAR  &kp FSLH  &kp CARET
-                                                      &trans     &trans         &trans                &kp EQUAL   &kp RIGHT_SHIFT  &kp PERCENT
+          &none      &none     &none     &none      &none    &kp KP_NUMBER_6  &kp KP_NUMBER_7        &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp KP_NUMBER_0
+          &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none    &kp CARET        &kp AMPERSAND          &kp ASTERISK       &kp MINUS        &kp EQUAL
+&kp CAPS  &none      &none     &none     &none      &none    &kp SLASH        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp PIPE
+                               &none     &trans     &none    &kp INS          &trans                 &none
             >;
         };
 
-        sym_func {
+        r_callum {
             bindings = <
-           &kp ESC        &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &none             &kp F1   &kp F2           &kp F3   &kp F4   &kp F5
-           &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6   &kp F7           &kp F8   &kp F9   &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11  &kp F12          &kp F13  &kp F14  &kp F15  &kp F16
-                                                &trans                 &trans            &trans            &none    &kp RIGHT_SHIFT  &none
+           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3   &kp KP_NUMBER_4  &kp KP_NUMBER_5    &none  &none      &none     &none     &none
+           &kp EXCLAMATION  &kp AT_SIGN      &kp HASH          &kp DOLLAR       &kp PERCENT        &none  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL
+&kp GRAVE  &kp LT           &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LPAR         &kp BSLH           &none  &none      &none     &none     &none      &none
+                                             &none             &none            &kp DELETE         &none  &none      &none
             >;
         };
 
-        device {
+        navfn {
             bindings = <
-       &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none             &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-       &kp K_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &none    &none         &none         &none         &none         &none
-&none  &none       &none                 &none                 &none             &none    &none         &none         &none         &none         &none         &bt BT_CLR
-                                         &none                 &none             &none    &none         &none         &none
+          &mkp MB4               &mkp MB3           &mkp MB2           &mkp MB1             &mkp MB5    &kp F11  &mmv MOVE_LEFT          &mmv MOVE_DOWN        &mmv MOVE_UP        &mmv MOVE_RIGHT
+          &hrml LEFT_CONTROL F1  &hrml LEFT_ALT F2  &hrml LEFT_GUI F3  &hrml LEFT_SHIFT F4  &kp F5      &none    &hrmr RIGHT_SHIFT LEFT  &hrmr RIGHT_GUI DOWN  &hrmr RIGHT_ALT UP  &hrmr RCTRL RIGHT
+&kp CAPS  &kp F6                 &kp F7             &kp F8             &kp F9               &kp F10     &kp F12  &scrl_left              &scrl_down            &scrl_up            &scrl_right        &none
+                                                    &none              &trans               &none       &none    &trans                  &none
             >;
         };
-
-        extra1 { status = "reserved"; };
-
-        extra2 { status = "reserved"; };
-
-        extra3 { status = "reserved"; };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        device {
+        navfn_cond {
             if-layers = <1 2>;
             then-layer = <3>;
         };
