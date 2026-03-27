@@ -200,7 +200,7 @@
         aptmak {
             bindings = <
                 &kp Q          &kp W             &kp F             &kp P               &kp B    &kp J       &kp L                &kp U              &kp Y              &kp SEMI
-                &hrml LCTRL R  &hrml LEFT_ALT S  &hrml LEFT_GUI T  &hrml LEFT_SHIFT H  &kp G    &kp PERIOD  &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI A  &hrmr RIGHT_ALT I  &hrmr RCTRL O
+                &hrml LCTRL H  &hrml LEFT_ALT R  &hrml LEFT_GUI S  &hrml LEFT_SHIFT T  &kp G    &kp PERIOD  &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI A  &hrmr RIGHT_ALT I  &hrmr RCTRL O
 &hrml CAPS TAB  &kp Z          &kp X             &kp C             &kp D               &kp V    &kp K       &kp M                &kp COMMA          &kp SQT            &kp QUESTION   &hrmr CAPSLOCK EXCLAMATION
                                                  &kp BACKSPACE     &mo 1               &kp E    &kp SPACE   &mo 2                &kp ENTER
             >;
