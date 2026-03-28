@@ -21,82 +21,72 @@
 
         soft_off {
             bindings = <&soft_off>;
-            key-positions = <0 20 9 31 33 36>;
+            key-positions = <32 37 20>;
         };
 
         bt0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <5 20 33>;
+            key-positions = <5 32 37>;
         };
 
         bt1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <20 33 6>;
+            key-positions = <6 32 37>;
         };
 
         bt2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <20 7 33>;
+            key-positions = <7 32 37>;
         };
 
         bt3 {
             bindings = <&bt BT_SEL 3>;
-            key-positions = <8 20 33>;
+            key-positions = <8 32 37>;
         };
 
         bt4 {
             bindings = <&bt BT_SEL 4>;
-            key-positions = <20 33 9>;
-        };
-
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <20 4 33 36 5 31>;
-        };
-
-        reset {
-            bindings = <&sys_reset>;
-            key-positions = <20 25 33 26 36 31>;
+            key-positions = <9 32 37>;
         };
 
         btd0 {
             bindings = <&bt BT_DISC 0>;
-            key-positions = <26 20 33>;
+            key-positions = <26 32 37>;
         };
 
         btd1 {
             bindings = <&bt BT_DISC 1>;
-            key-positions = <20 33 27>;
+            key-positions = <27 32 37>;
         };
 
         btd2 {
             bindings = <&bt BT_DISC 2>;
-            key-positions = <20 33 28>;
+            key-positions = <28 32 37>;
         };
 
         btd3 {
             bindings = <&bt BT_DISC 3>;
-            key-positions = <29 20 33>;
+            key-positions = <29 32 37>;
         };
 
         btd4 {
             bindings = <&bt BT_DISC 4>;
-            key-positions = <20 33 30>;
+            key-positions = <30 37 32>;
         };
 
         btclr {
             bindings = <&bt BT_CLR>;
-            key-positions = <20 33 15>;
+            key-positions = <31 32 37>;
         };
 
         colemak {
             bindings = <&to 0>;
-            key-positions = <36 13 30>;
+            key-positions = <37 32 13>;
         };
 
         aptmak {
-            bindings = <&to 4>;
-            key-positions = <36 12 30>;
+            bindings = <&to 5>;
+            key-positions = <32 37 3>;
         };
 
         Backspace {
@@ -178,19 +168,19 @@
 
         colemak {
             bindings = <
-                &kp Q          &kp W             &kp F          &kp P               &kp B          &kp J        &kp L                &kp U              &kp Y              &kp SEMI
-                &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LMETA S  &hrml LEFT_SHIFT T  &hrml F13 G    &hrmr F13 M  &hrmr RIGHT_SHIFT N  &hrmr LEFT_META E  &hrmr RIGHT_ALT I  &hrmr RCTRL O
-&hrml CAPS TAB  &kp Z          &kp X             &kp C          &kp D               &kp V          &kp K        &kp H                &kp COMMA          &kp DOT            &kp QUESTION   &hrmr CAPS APOSTROPHE
-                                                 &mo 3          &mo 1               &none          &kp SPACE    &mo 1                &mo 2
+               &kp Q          &kp W             &kp F          &kp P               &kp B          &kp J        &kp L                &kp U              &kp Y              &kp SEMI
+               &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LMETA S  &hrml LEFT_SHIFT T  &hrml F13 G    &hrmr F13 M  &hrmr RIGHT_SHIFT N  &hrmr LEFT_META E  &hrmr RIGHT_ALT I  &hrmr RCTRL O
+&hrml F14 TAB  &kp Z          &kp X             &kp C          &kp D               &kp V          &kp K        &kp H                &kp COMMA          &kp DOT            &kp QUESTION   &hrmr F14 APOSTROPHE
+                                                &mo 3          &mo 1               &none          &kp SPACE    &mo 1                &mo 2
             >;
         };
 
         symbol {
             bindings = <
-                  &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4          &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7              &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
-                  &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LEFT_SHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RIGHT_SHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
-&hrml CAPS GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR                 &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr CAPS BACKSLASH
-                                                                   &trans               &none                    &none                &trans           &trans                       &trans
+                 &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4          &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7              &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
+                 &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LEFT_SHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RIGHT_SHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
+&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR                 &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
+                                                                  &trans               &none                    &none                &trans           &trans                       &trans
             >;
         };
 
@@ -220,14 +210,23 @@
                        &mo 3  &mo 2  &kp E    &kp SPACE   &mo 1  &kp ENTER
             >;
         };
+
+        comboshield {
+            bindings = <
+       &none  &none  &none   &none  &none    &none  &none  &none   &none  &none
+       &none  &none  &none   &none  &none    &none  &none  &none   &none  &none
+&none  &none  &none  &none   &none  &none    &none  &none  &none   &none  &none  &none
+                     &trans  &none  &none    &none  &none  &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        navfn_cond {
-            if-layers = <1 2>;
-            then-layer = <4>;
+        combo_shield {
+            if-layers = <2>;
+            then-layer = <3>;
         };
     };
 };
