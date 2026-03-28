@@ -98,6 +98,21 @@
             bindings = <&to 4>;
             key-positions = <36 12 30>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17 18>;
+        };
+
+        Escape {
+            bindings = <&kp ESC>;
+            key-positions = <1 2 3>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <6 7 8>;
+        };
     };
 
     behaviors {
@@ -161,48 +176,48 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha {
+        colemak {
             bindings = <
-                &kp Q          &kp W             &kp F             &kp P               &kp B       &kp J      &kp L                &kp U              &kp Y              &kp SEMI
-                &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LEFT_GUI S  &hrml LEFT_SHIFT T  &kp G       &kp M      &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI E  &hrmr RIGHT_ALT I  &hrmr RCTRL O
-&hrml CAPS TAB  &kp Z          &kp X             &kp C             &kp D               &kp V       &kp K      &kp H                &kp COMMA          &kp DOT            &kp QUESTION   &hrmr CAPSLOCK EXCLAMATION
-                                                 &kp BACKSPACE     &mo 1               &kp BSPC    &kp SPACE  &mo 2                &kp ENTER
+                &kp Q          &kp W             &kp F          &kp P               &kp B          &kp J        &kp L                &kp U              &kp Y              &kp SEMI
+                &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LMETA S  &hrml LEFT_SHIFT T  &hrml F13 G    &hrmr F13 M  &hrmr RIGHT_SHIFT N  &hrmr LEFT_META E  &hrmr RIGHT_ALT I  &hrmr RCTRL O
+&hrml CAPS TAB  &kp Z          &kp X             &kp C          &kp D               &kp V          &kp K        &kp H                &kp COMMA          &kp DOT            &kp QUESTION   &hrmr CAPS APOSTROPHE
+                                                 &mo 3          &mo 1               &none          &kp SPACE    &mo 1                &mo 2
             >;
         };
 
-        l_callum {
+        symbol {
             bindings = <
-         &kp ESCAPE  &none     &none     &none      &none       &kp KP_NUMBER_6  &kp KP_NUMBER_7        &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp KP_NUMBER_0
-         &kp LCTRL   &kp LALT  &kp LGUI  &kp LSHFT  &kp CAPS    &kp CARET        &kp AMPERSAND          &kp ASTERISK       &kp MINUS        &kp EQUAL
-&kp F13  &none       &none     &none     &none      &none       &kp SLASH        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp PIPE
-                               &none     &trans     &none       &kp INS          &trans                 &kp BACKSPACE
+                  &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4          &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7              &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
+                  &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LEFT_SHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RIGHT_SHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
+&hrml CAPS GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR                 &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr CAPS BACKSLASH
+                                                                   &trans               &none                    &none                &trans           &trans                       &trans
             >;
         };
 
-        r_callum {
+        nav {
             bindings = <
-           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3   &kp KP_NUMBER_4  &kp KP_NUMBER_5    &none     &none      &none     &kp BACKSPACE  &kp ENTER
-           &kp EXCLAMATION  &kp AT_SIGN      &kp HASH          &kp DOLLAR       &kp PERCENT        &kp CAPS  &kp RSHFT  &kp RGUI  &kp RALT       &kp RCTRL
-&kp GRAVE  &kp LT           &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LPAR         &kp BSLH           &none     &none      &none     &none          &none      &kp F13
-                                             &none             &trans           &none              &none     &trans     &none
+          &mkp MB4          &mkp MB3      &mkp MB2      &mkp MB1        &mkp MB5    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp F13     &none  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&kp CAPS  &none             &none         &none         &none           &none       &none  &scrl_left      &scrl_down      &scrl_up      &scrl_right      &none
+                                          &none         &trans          &none       &none  &trans          &none
             >;
         };
 
-        navfn {
+        numpad {
             bindings = <
-          &mkp MB4               &mkp MB3           &mkp MB2           &mkp MB1             &mkp MB5    &kp F11  &mmv MOVE_LEFT          &mmv MOVE_DOWN        &mmv MOVE_UP        &mmv MOVE_RIGHT
-          &hrml LEFT_CONTROL F1  &hrml LEFT_ALT F2  &hrml LEFT_GUI F3  &hrml LEFT_SHIFT F4  &kp F5      &none    &hrmr RIGHT_SHIFT LEFT  &hrmr RIGHT_GUI DOWN  &hrmr RIGHT_ALT UP  &hrmr RCTRL RIGHT
-&kp CAPS  &kp F6                 &kp F7             &kp F8             &kp F9               &kp F10     &kp F12  &scrl_left              &scrl_down            &scrl_up            &scrl_right        &none
-                                                    &none              &trans               &none       &none    &trans                  &none
+           &kp F1    &kp F2     &kp F3        &kp F4     &kp F5       &kp PERCENT  &kp N7  &kp N8  &kp N9  &kp DOLLAR
+           &kp PLUS  &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL    &kp N0       &kp N4  &kp N5  &kp N6  &kp F11
+&kp CARET  &kp F6    &kp F7     &kp F8        &kp F9     &kp F10      &kp DOT      &kp N1  &kp N2  &kp N3  &kp F12     &none
+                                &trans        &none      &none        &none        &none   &none
             >;
         };
 
         aptmak {
             bindings = <
-                &kp Q          &kp W             &kp F             &kp P               &kp B    &kp J       &kp L                &kp U              &kp Y              &kp SEMI
-                &hrml LCTRL H  &hrml LEFT_ALT R  &hrml LEFT_GUI S  &hrml LEFT_SHIFT T  &kp G    &kp PERIOD  &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI A  &hrmr RIGHT_ALT I  &hrmr RCTRL O
-&hrml CAPS TAB  &kp Z          &kp X             &kp C             &kp D               &kp V    &kp K       &kp M                &kp COMMA          &kp SQT            &kp QUESTION   &hrmr CAPSLOCK EXCLAMATION
-                                                 &kp BACKSPACE     &mo 1               &kp E    &kp SPACE   &mo 2                &kp ENTER
+         &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J       &kp L  &kp U      &kp Y    &kp SEMI
+         &kp H  &kp R  &kp S  &kp T  &kp G    &kp PERIOD  &kp N  &kp A      &kp I    &kp O
+&kp TAB  &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K       &kp M  &kp COMMA  &kp SQT  &kp QUESTION  &kp ENTER
+                       &mo 3  &mo 2  &kp E    &kp SPACE   &mo 1  &kp ENTER
             >;
         };
     };
@@ -211,7 +226,7 @@
         compatible = "zmk,conditional-layers";
 
         navfn_cond {
-            if-layers = <1 3>;
+            if-layers = <1 2>;
             then-layer = <4>;
         };
     };
