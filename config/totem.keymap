@@ -103,6 +103,11 @@
             bindings = <&kp ENTER>;
             key-positions = <6 7 8>;
         };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12 13>;
+        };
     };
 
     behaviors {
@@ -177,19 +182,19 @@
 
         symbol {
             bindings = <
-                 &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4          &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7              &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
-                 &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LEFT_SHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RIGHT_SHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
-&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR                 &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
-                                                                  &trans               &none                    &none                &trans           &trans                       &trans
+                 &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4      &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7         &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
+                 &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
+&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
+                                                                  &none                &trans               &none                &none            &trans                  &none
             >;
         };
 
         nav {
             bindings = <
-          &mkp MB4          &mkp MB3      &mkp MB2      &mkp MB1        &mkp MB5    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp F13     &none  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&kp CAPS  &none             &none         &none         &none           &none       &none  &scrl_left      &scrl_down      &scrl_up      &scrl_right      &none
-                                          &none         &trans          &none       &none  &trans          &none
+         &mkp MB4          &mkp MB3      &mkp MB2      &mkp MB1        &mkp MB5    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+         &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp F13     &none  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&kp F14  &none             &none         &none         &none           &none       &none  &scrl_left      &scrl_down      &scrl_up      &scrl_right      &none
+                                         &none         &none           &none       &none  &none           &trans
             >;
         };
 
@@ -204,10 +209,10 @@
 
         aptmak {
             bindings = <
-         &kp Q  &kp W  &kp F  &kp P  &kp B    &kp J       &kp L  &kp U      &kp Y    &kp SEMI
-         &kp H  &kp R  &kp S  &kp T  &kp G    &kp PERIOD  &kp N  &kp A      &kp I    &kp O
-&kp TAB  &kp Z  &kp X  &kp C  &kp D  &kp V    &kp K       &kp M  &kp COMMA  &kp SQT  &kp QUESTION  &kp ENTER
-                       &mo 3  &mo 2  &kp E    &kp SPACE   &mo 1  &kp ENTER
+               &kp Q          &kp W             &kp F             &kp P           &kp B          &kp J             &kp L           &kp U              &kp Y              &kp SEMI
+               &hrml LCTRL H  &hrml LEFT_ALT R  &hrml LEFT_GUI S  &hrml LSHIFT T  &hrml F13 G    &hrmr F13 PERIOD  &hrmr RSHIFT N  &hrmr RIGHT_GUI A  &hrmr RIGHT_ALT I  &hrmr RCTRL O
+&hrml F14 TAB  &kp Z          &kp X             &kp C             &kp D           &kp V          &kp K             &kp M           &kp COMMA          &kp SQT            &kp QUESTION   &hrmr F14 ENTER
+                                                &mo 3             &mo 1           &kp E          &kp SPACE         &mo 1           &mo 2
             >;
         };
 
