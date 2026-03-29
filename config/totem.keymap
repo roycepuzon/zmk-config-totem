@@ -15,6 +15,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mmv {
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -52,7 +55,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -62,7 +65,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -103,6 +106,71 @@
         };
     };
 
+    macros {
+        bold_macro: bold_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp STAR &kp STAR &kp LEFT>;
+            label = "BOLD_MACRO";
+        };
+
+        double_quote_macro: double_quote_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "DOUBLE_QUOTE_MACRO";
+        };
+
+        single_quote_macro: single_quote_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "SINGLE_QUOTE_MACRO";
+        };
+
+        tilde_macro: grave_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp LEFT>;
+            label = "GRAVE_MACRO";
+        };
+
+        parens_macro: parens_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARENS_MACRO";
+        };
+
+        bracket_macro: bracket_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "BRACKET_MACRO";
+        };
+
+        brace_macro: brace_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "BRACE_MACRO";
+        };
+
+        tag_macro: tag_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp GT &kp LEFT>;
+            label = "TAG_MACRO";
+        };
+
+        css_comment_macro: css_comment_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp STAR &kp SPACE &kp SPACE &kp STAR &kp FSLH &kp LEFT &kp LEFT &kp LEFT>;
+            label = "CSS_COMMENT_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -117,10 +185,10 @@
 
         symbol {
             bindings = <
-                 &kp NUMBER_1             &kp NUMBER_2            &kp NUMBER_3         &kp NUMBER_4         &kp N5               &kp NUMBER_6     &kp N7                  &kp NUMBER_8              &kp N9                 &kp NUMBER_0
-                 &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
-&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
-                                                                  &none                &trans               &none                &none            &trans                  &none
+                 &tag_macro               &brace_macro            &bracket_macro       &parens_macro        &css_comment_macro    &single_quote_macro  &double_quote_macro     &bold_macro               &none                  &tilde_macro
+                 &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT     &hrmr F13 CARET      &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
+&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH              &kp SLASH            &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
+                                                                  &none                &trans               &none                 &none                &trans                  &none
             >;
         };
 
