@@ -21,7 +21,7 @@
 
         soft_off {
             bindings = <&soft_off>;
-            key-positions = <32 37 20>;
+            key-positions = <32 37 0 4 5 9>;
         };
 
         bt0 {
@@ -85,7 +85,7 @@
         };
 
         aptmak {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <32 37 3>;
         };
 
@@ -109,64 +109,9 @@
             key-positions = <11 12 13>;
         };
 
-        abtc0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <32 34 0>;
-        };
-
-        abtc1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <32 34 1>;
-        };
-
-        abtc2 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <32 34 2>;
-        };
-
-        abtc3 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <32 34 3>;
-        };
-
-        abtc4 {
-            bindings = <&bt BT_SEL 4>;
-            key-positions = <32 34 4>;
-        };
-
-        abtd0 {
-            bindings = <&bt BT_DISC 0>;
-            key-positions = <32 34 21>;
-        };
-
-        abtd1 {
-            bindings = <&bt BT_DISC 1>;
-            key-positions = <32 34 22>;
-        };
-
-        abtd2 {
-            bindings = <&bt BT_DISC 2>;
-            key-positions = <32 34 23>;
-        };
-
-        abtd3 {
-            bindings = <&bt BT_DISC 3>;
-            key-positions = <32 34 24>;
-        };
-
-        abtd4 {
-            bindings = <&bt BT_DISC 4>;
-            key-positions = <32 34 25>;
-        };
-
-        abtclra {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <20 32 34>;
-        };
-
-        abtclr {
-            bindings = <&bt BT_CLR>;
-            key-positions = <32 34 14>;
+        combo_backspace_2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
         };
     };
 
@@ -289,9 +234,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        combo_shield {
-            if-layers = <2>;
-            then-layer = <3>;
+        cond_comboshield {
+            if-layers = <2 3>;
+            then-layer = <5>;
         };
     };
 };
