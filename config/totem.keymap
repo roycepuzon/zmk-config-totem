@@ -52,7 +52,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
 
@@ -62,7 +62,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
 
@@ -117,7 +117,7 @@
 
         symbol {
             bindings = <
-                 &kp KP_NUMBER_1          &kp KP_NUMBER_2         &kp KP_NUMBER_3      &kp KP_NUMBER_4      &kp KP_NUMBER_5      &kp KP_NUMBER_6  &kp KP_NUMBER_7         &kp KP_NUMBER_8           &kp KP_NUMBER_9        &kp KP_NUMBER_0
+                 &kp NUMBER_1             &kp NUMBER_2            &kp NUMBER_3         &kp NUMBER_4         &kp N5               &kp NUMBER_6     &kp N7                  &kp NUMBER_8              &kp N9                 &kp NUMBER_0
                  &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT    &hrmr F13 CARET  &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
 &hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH             &kp SLASH        &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
                                                                   &none                &trans               &none                &none            &trans                  &none
