@@ -108,6 +108,66 @@
             bindings = <&kp TAB>;
             key-positions = <11 12 13>;
         };
+
+        abtc0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <32 34 0>;
+        };
+
+        abtc1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <32 34 1>;
+        };
+
+        abtc2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <32 34 2>;
+        };
+
+        abtc3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <32 34 3>;
+        };
+
+        abtc4 {
+            bindings = <&bt BT_SEL 4>;
+            key-positions = <32 34 4>;
+        };
+
+        abtd0 {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <32 34 21>;
+        };
+
+        abtd1 {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <32 34 22>;
+        };
+
+        abtd2 {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <32 34 23>;
+        };
+
+        abtd3 {
+            bindings = <&bt BT_DISC 3>;
+            key-positions = <32 34 24>;
+        };
+
+        abtd4 {
+            bindings = <&bt BT_DISC 4>;
+            key-positions = <32 34 25>;
+        };
+
+        abtclra {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <20 32 34>;
+        };
+
+        abtclr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <32 34 14>;
+        };
     };
 
     behaviors {
@@ -117,7 +177,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 37>;
         };
 
@@ -127,7 +187,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 34>;
         };
 
