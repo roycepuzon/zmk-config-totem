@@ -129,7 +129,7 @@
          &mkp MB4          &mkp MB3      &mkp MB2      &mkp MB1        &mkp MB5    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp F13     &none  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
 &kp F14  &none             &none         &none         &none           &none       &none  &scrl_left      &scrl_down      &scrl_up      &scrl_right      &none
-                                         &none         &none           &none       &none  &none           &trans
+                                         &trans        &none           &none       &none  &none           &trans
             >;
         };
 
@@ -138,7 +138,7 @@
            &kp F1    &kp F2     &kp F3        &kp F4     &kp F5       &kp PERCENT  &kp N7  &kp N8  &kp N9  &kp DOLLAR
            &kp PLUS  &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL    &kp N0       &kp N4  &kp N5  &kp N6  &kp F11
 &kp CARET  &kp F6    &kp F7     &kp F8        &kp F9     &kp F10      &kp DOT      &kp N1  &kp N2  &kp N3  &kp F12     &none
-                                &trans        &none      &none        &none        &none   &none
+                                &trans        &none      &none        &none        &none   &trans
             >;
         };
 
