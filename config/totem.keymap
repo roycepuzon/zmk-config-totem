@@ -197,7 +197,7 @@
             bindings = <
                  &tag_macro               &brace_macro            &bracket_macro       &parens_macro        &css_comment_macro    &single_quote_macro  &double_quote_macro     &bold_macro               &none                  &tilde_macro
                  &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT     &hrmr F13 CARET      &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
-&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH              &kp SLASH            &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
+&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH              &kp SLASH            &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 PIPE
                                                                   &none                &trans               &none                 &none                &trans                  &none
             >;
         };
@@ -206,16 +206,16 @@
             bindings = <
                  &tag_macro               &brace_macro            &bracket_macro       &parens_macro        &css_comment_macro    &single_quote_macro  &double_quote_macro     &bold_macro               &none                  &tilde_macro
                  &hrml LCTRL EXCLAMATION  &hrml LEFT_ALT AT_SIGN  &hrml LEFT_GUI HASH  &hrml LSHIFT DOLLAR  &hrml F13 PERCENT     &hrmr F13 CARET      &hrmr RSHIFT AMPERSAND  &hrmr RIGHT_GUI ASTERISK  &hrmr RIGHT_ALT MINUS  &hrmr RCTRL EQUAL
-&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH              &kp SLASH            &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 BACKSLASH
+&hrml F14 GRAVE  &kp LT                   &kp LEFT_BRACE          &kp LEFT_BRACKET     &kp LPAR             &kp BSLH              &kp SLASH            &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACKET         &kp RIGHT_BRACE        &kp GREATER_THAN   &hrmr F14 PIPE
                                                                   &none                &trans               &none                 &none                &trans                  &none
             >;
         };
 
         numpad {
             bindings = <
-                 &kp F1            &kp F2                &kp F3                   &kp F4                  &kp F5             &kp PERCENT  &kp N7  &kp N8  &kp N9  &kp DOLLAR
-                 &hrml LCTRL PLUS  &hrml LEFT_ALT MINUS  &hrml LEFT_GUI ASTERISK  &hrml LEFT_SHIFT SLASH  &hrml F13 EQUAL    &kp N0       &kp N4  &kp N5  &kp N6  &kp F11
-&hrml F14 CARET  &kp F6            &kp F7                &kp F8                   &kp F9                  &kp F10            &kp DOT      &kp N1  &kp N2  &kp N3  &kp F12     &none
+                 &none             &none                 &none                    &none                   &none              &kp PERCENT  &kp N7  &kp N8  &kp N9  &kp DOLLAR
+                 &hrml LCTRL PLUS  &hrml LEFT_ALT MINUS  &hrml LEFT_GUI ASTERISK  &hrml LEFT_SHIFT SLASH  &hrml F13 EQUAL    &kp N0       &kp N4  &kp N5  &kp N6  &none
+&hrml F14 CARET  &none             &none                 &none                    &none                   &none              &kp DOT      &kp N1  &kp N2  &kp N3  &none       &none
                                                          &trans                   &none                   &none              &none        &none   &trans
             >;
         };
