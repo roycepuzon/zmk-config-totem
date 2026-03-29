@@ -3,4 +3,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.4.0
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@118359c83efa0758144489fd5e12cc6f5bdbad4c
