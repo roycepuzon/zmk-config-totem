@@ -49,12 +49,12 @@
 
         double_quote_combo {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <17 7>;
+            key-positions = <16 6>;
         };
 
         single_quote_combo {
             bindings = <&kp SQT>;
-            key-positions = <6 16>;
+            key-positions = <17 7>;
         };
     };
 
